@@ -1,0 +1,32 @@
+out_to_x no
+own_window no
+out_to_console yes
+double_buffer no
+background no
+update_interval 1.0
+total_run_times 0
+if_up_strictness address
+user_spacer left
+override_utf8_locale no
+cpu_avg_samples 2
+
+
+TEXT representation
+
+#free space on /home
+HDD : ${fs_free /home} | \
+#ethernet status
+enp5s0 ${if_up enp5s0}$(addr enp5s0}${endif} | \
+#wireless status
+wlp9s0 ${if_up wlp9s0}${addr wlp9s0}${endif} | \
+#network  meter
+D:${downspeed wlp9s0}/s U:${upspeed wlp9s0}/s T:${totaldown wlp9s0} | \
+#cpu status
+#CPU ${cpu cpu0}% ${freq_g 1}GHZ ${exec sencsors | grep "Core 0"|awk '{print $3}'} | \
+#ram in use
+RAM ${memperc}% | \
+#BATT
+BATT ${battery BAT0} | \
+${time %a %d.%m.%y} ${time %H:%M} | \
+#audio control
+#Vol:${ exec amixer sget 'Master' | grep 'Mono:' | cut -c22-24 | sed '/^$/d'}
