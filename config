@@ -8,6 +8,10 @@
 # Set win key as mod
 set $mod Mod4
 
+#moving through workspace 
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Control+Up workspace right
+
 # Font for window titles.
 font pango:Inconsolata 11
 
@@ -28,7 +32,7 @@ bindsym $mod+p exec dmenu_run
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+ focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -108,7 +112,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # [TODO] Assign apps to proper workspaces
 assign [class="[gG]oogle-chrome"] 1
 assign [class="[eE]macs"] 2
-assign [class="[xX]term"] 3
+assign [class="Xterm"] 3
 assign [class="[tT]hunar"] 4
 assign [class="[sS]kype"] 5
 #assign [class="[cC]lementine"] 9
@@ -164,5 +168,5 @@ exec --no-startup-id emacs
 exec --no-startup-id google-chrome
 #exec --no-startup-id nm-applet
 exec --no-startup-id thunar
-exec --no-startup-id xterm
-exec --no-startup-id pa-applet
+#exec --no-startup-id xterm
+#exec --no-startup-id pa-applet

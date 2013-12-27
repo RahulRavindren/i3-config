@@ -22,7 +22,7 @@ wlp9s0 ${if_up wlp9s0}${addr wlp9s0}${endif} | \
 #network  meter
 D:${downspeed wlp9s0}/s U:${upspeed wlp9s0}/s T:${totaldown wlp9s0} | \
 #cpu status
-${color #757201}CPU ${cpu cpu0}%${freq_g 1}GHZ ${exec sencsors | grep "Core 0"|awk '{print $3}'} | \
+${color red}CPU ${cpu cpu0}%${freq_g 1}GHZ ${exec sencsors | grep "Core 0"|awk '{print $3}'} | \
 #temperature
 TEMP ${acpitemp}°C |\
 #ram in use
