@@ -32,5 +32,4 @@ BATT ${battery BAT0} | \
 ${time %a %d.%m.%y} ${time %H:%M} | \
 #audio control
 #Vol:${ exec amixer sget 'Master' | grep 'Mono:' | cut -c22-24 | sed '/^$/d'}
-#bg-image
-${image ~/Desktop/wallpaper-bane-the-dark-knight-rises-3.jpg -p 20,20 -s 1024x720 }
+

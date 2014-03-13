@@ -9,8 +9,8 @@
 set $mod Mod4
 
 #moving through workspace 
-bindsym $mod+Tab workspace back_and_forth
-bindsym $mod+Control+Up workspace right
+#bindsym $mod+Tab workspace back_and_forth
+#bindsym $mod+Control+Up workspace right
 
 # Font for window titles.
 font pango:Inconsolata 11
@@ -19,7 +19,7 @@ font pango:Inconsolata 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -114,7 +114,7 @@ assign [class="[gG]oogle-chrome"] 1
 assign [class="[eE]macs"] 2
 assign [class="Xterm"] 3
 assign [class="[tT]hunar"] 4
-assign [class="[sS]kype"] 5
+assign [class="[fF]irefox-nightly"] 5
 #assign [class="[cC]lementine"] 9
 #assign [class="[dD]eluge"] 10
 
@@ -168,5 +168,6 @@ exec --no-startup-id emacs
 exec --no-startup-id google-chrome
 #exec --no-startup-id nm-applet
 exec --no-startup-id thunar
+exec --no-startup-id firefox
 #exec --no-startup-id xterm
 #exec --no-startup-id pa-applet
